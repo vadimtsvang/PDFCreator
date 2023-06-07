@@ -7,11 +7,33 @@
 
 import UIKit
 
+enum ViewType: CaseIterable {
+    case name
+    case email
+    case phone
+}
+
 final class InfoView: UIView {
     
     private let titleLabel = UILabel(text: "")
     private let infoTextField = InfoTextField()
     private let lineView = UIView()
+    private var type: ViewType = .name
+    
+    var isFailed = false {
+        didSet {
+            if self.isFailed {
+                titleLabel.textColor = .red
+                lineView.backgroundColor = .red
+                lineView.alpha = 1
+                shake()
+            } else {
+                titleLabel.textColor = .lightGray
+                lineView.backgroundColor = .lightGray
+                lineView.alpha = 0.2
+            }
+        }
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -26,11 +48,33 @@ final class InfoView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    convenience init(_ title: String) {
+    convenience init(_ title: String, type: ViewType) {
         self.init()
-        titleLabel.text = title
+        self.titleLabel.text = title
+        self.type = type
     }
     
+    func getText() -> String {
+        guard let text = infoTextField.text else { return "" }
+        return text
+    }
+    
+}
+
+//MARK: - UITextFieldDelegate
+extension InfoView: UITextFieldDelegate {
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        isFailed = false
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        infoTextField.resignFirstResponder()
+    }
+}
+
+//MARK: - Setup UI
+
+extension InfoView {
     private func configureTitleLabel() {
         addSubview(titleLabel)
         NSLayoutConstraint.activate([
@@ -42,6 +86,7 @@ final class InfoView: UIView {
     }
     
     private func configureInfoTextField() {
+        infoTextField.delegate = self
         addSubview(infoTextField)
         NSLayoutConstraint.activate([
             infoTextField.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 0),

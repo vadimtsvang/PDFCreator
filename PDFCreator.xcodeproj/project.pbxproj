@@ -17,6 +17,8 @@
 		1F19AC092A28C9E50014AFD0 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F19AC082A28C9E50014AFD0 /* InfoView.swift */; };
 		1F19AC0B2A28CA640014AFD0 /* InfoTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F19AC0A2A28CA640014AFD0 /* InfoTextField.swift */; };
 		1F19AC0D2A28CD5F0014AFD0 /* InfoImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F19AC0C2A28CD5F0014AFD0 /* InfoImageView.swift */; };
+		1F90BCEB2A3087CC00F278E7 /* UIViewController + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F90BCEA2A3087CC00F278E7 /* UIViewController + Extensions.swift */; };
+		1F90BCED2A308F3B00F278E7 /* UiView + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F90BCEC2A308F3B00F278E7 /* UiView + Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		1F19AC082A28C9E50014AFD0 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
 		1F19AC0A2A28CA640014AFD0 /* InfoTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoTextField.swift; sourceTree = "<group>"; };
 		1F19AC0C2A28CD5F0014AFD0 /* InfoImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoImageView.swift; sourceTree = "<group>"; };
+		1F90BCEA2A3087CC00F278E7 /* UIViewController + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Extensions.swift"; sourceTree = "<group>"; };
+		1F90BCEC2A308F3B00F278E7 /* UiView + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UiView + Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +127,8 @@
 			isa = PBXGroup;
 			children = (
 				1F19AC062A28C8C10014AFD0 /* UILabel + Extensions.swift */,
+				1F90BCEA2A3087CC00F278E7 /* UIViewController + Extensions.swift */,
+				1F90BCEC2A308F3B00F278E7 /* UiView + Extensions.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -143,6 +149,8 @@
 			dependencies = (
 			);
 			name = PDFCreator;
+			packageProductDependencies = (
+			);
 			productName = PDFCreator;
 			productReference = 1F19ABE72A28C3580014AFD0 /* PDFCreator.app */;
 			productType = "com.apple.product-type.application";
@@ -171,6 +179,8 @@
 				Base,
 			);
 			mainGroup = 1F19ABDE2A28C3580014AFD0;
+			packageReferences = (
+			);
 			productRefGroup = 1F19ABE82A28C3580014AFD0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -198,6 +208,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F19AC0D2A28CD5F0014AFD0 /* InfoImageView.swift in Sources */,
+				1F90BCEB2A3087CC00F278E7 /* UIViewController + Extensions.swift in Sources */,
+				1F90BCED2A308F3B00F278E7 /* UiView + Extensions.swift in Sources */,
 				1F19AC072A28C8C10014AFD0 /* UILabel + Extensions.swift in Sources */,
 				1F19ABEF2A28C3580014AFD0 /* ViewController.swift in Sources */,
 				1F19AC032A28C4FF0014AFD0 /* MainView.swift in Sources */,
