@@ -45,6 +45,16 @@ final class MainView: UIView {
         photoImageView.contentMode = .scaleAspectFill
     }
     
+    func getImage() -> UIImage {
+        guard let defaultImage = UIImage(named: "dm"),
+              let image = photoImageView.image else { return UIImage()}
+        
+        if image == UIImage(systemName: "person.badge.plus") {
+            return defaultImage
+        }
+        return image
+    }
+    
     func getInfoText(_ viewType: ViewType)-> String {
         switch viewType {
         case .name:
@@ -54,6 +64,10 @@ final class MainView: UIView {
         case .phone:
             return phoneView.getText()
         }
+    }
+    
+    func getSegmentedIndex() -> Int {
+        experienceSegmentedControl.selectedSegmentIndex
     }
     
     func setIsFailed(_ viewType: ViewType, _ isFailed: Bool) {
@@ -115,6 +129,7 @@ extension MainView {
     private func configureExperienceSegmentedControl() {
         experienceSegmentedControl = UISegmentedControl(items: ["1 year", "2 years", "3 years"])
         experienceSegmentedControl.selectedSegmentIndex = 0
+        experienceSegmentedControl.backgroundColor = .orange
         experienceSegmentedControl.translatesAutoresizingMaskIntoConstraints = false
         addSubview(experienceSegmentedControl)
         NSLayoutConstraint.activate([

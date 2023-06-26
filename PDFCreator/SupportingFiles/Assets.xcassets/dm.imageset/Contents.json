@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "Danger Mouse & Black Thought- Cheat Codes.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "Danger Mouse & Black Thought- Cheat Codes 1.jpg",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "Danger Mouse & Black Thought- Cheat Codes 2.jpg",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
